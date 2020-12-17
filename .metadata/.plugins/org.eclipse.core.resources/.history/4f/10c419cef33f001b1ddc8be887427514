@@ -1,0 +1,15 @@
+
+public class TestaPooEncapsulada {
+	public static void main(String[] args) {
+	
+		Cliente sergio = new Cliente();
+		Conta conta = new Conta();
+		conta.setAgencia(1234);
+		conta.setNumero(12346578);
+		conta.deposita(300);
+		conta.setTitular(sergio);
+		conta.getTitular().setNome("Sergio de Magalhaes Nunes");
+
+		System.out.println(conta.getTitular().getNome());
+	}
+}

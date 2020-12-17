@@ -1,0 +1,16 @@
+
+public class Programa {
+
+	public static void main (String[] args) {
+		
+		int idade = 25;
+		double salario = 1500.90;
+		float pi = 3.14f; // no tipo float, precisamos informar explicitamente que o número atribuído à variável é um float, colocando um "f" no final.
+		long inteiroLongo = 234234234l; // O mesmo acontece para o tipo long. Precisamos declarar que a atribuição é um tipo long com o "l" no final. Long é usado para números muito grandes.
+		short inteiroPequeno = 1500; // O short é usado para números pequenos.
+		byte inteiroMenorAinda = 122; // byte é usado para números muito pequenos, até 256.
+		
+		System.out.println("Olá, a minha idade é "+ idade + " e eu ganho R$" + salario + " por mês.");
+		
+	}
+}

@@ -1,0 +1,10 @@
+public class Conta {
+	int agencia;
+	int numero;
+	double saldo;
+	String titular; 
+	
+	void deposita(double valor) {
+		this.saldo += valor;
+	}
+}

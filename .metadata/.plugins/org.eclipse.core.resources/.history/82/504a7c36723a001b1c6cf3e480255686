@@ -1,0 +1,13 @@
+
+public class Programa {
+
+	public static void main (String[] args) {
+		System.out.println("Hello world");
+		
+		int idade;
+		idade = 25;
+		
+		System.out.println("Olá, a minha idade é "+ idade);
+		
+	}
+}

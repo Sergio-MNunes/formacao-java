@@ -1,0 +1,7 @@
+
+public class LacoFor {
+	public static void main(String[] args) {
+		System.out.println("Este perfil é de farmaceutico clínico");
+		}
+	}
+}
