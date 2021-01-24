@@ -4,7 +4,7 @@ public class TestaPooEncapsulada {
 	
 		Cliente sergio = new Cliente();
 		Conta conta = new Conta(1234, 123445678);
-		Conta conta2 = new Conta(634523477);
+		Conta conta2 = new Conta(634523477); // Esta conta está sendo criada com o construtor complementar, que não exige uma agência. Neste caso, é utilizada a agência padrão 0001
 		Conta conta3 = new Conta(3456, 123468987);
 		conta.deposita(300);
 		conta.setTitular(sergio); // nada demais, apenas passamos a referência para o setter do objeto conta, assim como os outros atributos acima.
