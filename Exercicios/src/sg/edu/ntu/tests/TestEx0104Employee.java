@@ -1,3 +1,5 @@
+package sg.edu.ntu.tests;
+import sg.edu.ntu.classes.Ex0104Employee;
 
 public class TestEx0104Employee {
 

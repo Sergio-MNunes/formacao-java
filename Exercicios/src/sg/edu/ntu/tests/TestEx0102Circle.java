@@ -1,3 +1,5 @@
+package sg.edu.ntu.tests;
+import sg.edu.ntu.classes.Ex0102Circle;
 
 public class TestEx0102Circle {
 

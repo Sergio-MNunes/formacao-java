@@ -1,3 +1,4 @@
+package sg.edu.ntu.classes;
 public class Ex0103Rectangle {
 
 	private float length;

@@ -1,3 +1,4 @@
+package sg.edu.ntu.classes;
 
 public class Ex0105InvoiceItem {
 	private String id;

@@ -1,3 +1,6 @@
+package sg.edu.ntu.tests;
+import sg.edu.ntu.classes.Ex0101Circle;
+
 /**
  *  A Test Driver for the Circle class
  */

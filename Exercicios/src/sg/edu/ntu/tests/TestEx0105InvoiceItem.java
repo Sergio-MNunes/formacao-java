@@ -1,3 +1,5 @@
+package sg.edu.ntu.tests;
+import sg.edu.ntu.classes.Ex0105InvoiceItem;
 
 public class TestEx0105InvoiceItem {
 
@@ -6,6 +8,5 @@ public class TestEx0105InvoiceItem {
 		
 		System.out.println("O total é " + i1.getTotal());
 		System.out.println(i1);
-	}
-
+	}	
 }

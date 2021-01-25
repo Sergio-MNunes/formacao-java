@@ -1,3 +1,5 @@
+package sg.edu.ntu.tests;
+import sg.edu.ntu.classes.Ex0103Rectangle;
 
 public class TestEx0103Rectangle {
 

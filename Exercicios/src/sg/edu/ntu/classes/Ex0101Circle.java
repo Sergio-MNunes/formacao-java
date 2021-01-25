@@ -1,3 +1,4 @@
+package sg.edu.ntu.classes;
 /**
  * The Circle class models a circle with a radius and color.
  */
