@@ -2,7 +2,7 @@ public class Conta implements PagarImposto {
 	private double saldo;
 	
 	public double getImpostoAPagar() {
-		return this.getSaldo() * 0.02;
+		return this.saldo * 0.02;
 	}
 
 	public double getSaldo() {

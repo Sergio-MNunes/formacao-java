@@ -11,5 +11,6 @@ public class TestEx0104Employee {
 		e1.raiseSalary(50);
 		System.out.println("Salario aumentado: " + e1.getSalary());
 		System.out.println("saida do toString: " + e1);
+		
 	}
 }
