@@ -41,6 +41,7 @@ public class Ex0105InvoiceItem {
 		return this.unitPrice*this.qty;
 	}
 	
+	@Override
 	public String toString() {
 		return "InvoiceItem[id=" + this.id + ",desc=" + this.desc + ",qty=" + this.qty + ",unitPrice=" + this.unitPrice + ']';
 	}

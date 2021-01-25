@@ -47,6 +47,7 @@ public class Ex0104Employee {
 		return this.salary;
 	}
 	
+	@Override
 	public String toString() {
 		return "Employee[id=" + this.id + ",name=" + this.getName() + ",salary=" + this.salary + ']';
 	}

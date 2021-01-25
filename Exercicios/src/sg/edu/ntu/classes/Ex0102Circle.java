@@ -28,6 +28,7 @@ public class Ex0102Circle {
 		return 2*Math.PI*this.radius;
 	}
 	
+	@Override
 	public String toString() {
 		return "Circle[radius=" + this.radius + "]";
 	}

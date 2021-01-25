@@ -63,6 +63,7 @@ public class Ex0101Circle {  // Save as "Circle.java"
    // If an instance is passed to the println(anInstance) method, the toString() method of that instance will be invoked implicitly. For example,
    // include the following toString() methods to the Circle class:
    /** Return a self-descriptive string of this instance in the form of Circle[radius=?,color=?] */
+   @Override
    public String toString() {
 	   return "Circle[radius=" + radius + " color=" + color + "]";
    }

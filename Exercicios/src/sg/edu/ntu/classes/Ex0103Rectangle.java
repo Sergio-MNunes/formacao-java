@@ -37,6 +37,7 @@ public class Ex0103Rectangle {
 		return this.width*2 + this.length*2;
 	}
 	
+	@Override
 	public String toString() {
 		return "Rectangle[length=" + this.length + ",width=" + this.width + "]";
 	}
