@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class Teste {
+public class TesteEntradaESaida {
 
 	public static void main (String[] args) throws IOException {
 		
@@ -22,10 +22,10 @@ public class Teste {
 		String linha = br.readLine(); 
 		
 		// imprime ate acabar o arquivo
-		while (linha != null){ 
-			System.out.println(linha);
-			linha = br.readLine();
-		}
+//		while (linha != null){ 
+//			System.out.println(linha);
+//			linha = br.readLine();
+//		}
 		
 		bw.write(br.readLine());
 		
