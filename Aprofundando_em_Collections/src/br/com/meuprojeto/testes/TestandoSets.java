@@ -3,6 +3,7 @@ package br.com.meuprojeto.testes;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -58,6 +59,26 @@ public class TestandoSets {
 		
 		// Veja novamente apos adicionar um novo elemento. Continua o mesmo tamanho, pois os Sets nao aceitam elementos iguais. Outra diferenca deles pras Lists.
 		System.out.println(alunos.size()); 
+		
+		System.out.println();
+		System.out.println("**Percorrendo um Set no Java 8**");
+		alunos.forEach(aluno -> {
+			System.out.println(aluno);
+		});
+		
+		System.out.println();
+		System.out.println("**Percorrendo um Set no Java 5**");
+		for (String aluno : alunos) {
+			System.out.println(aluno);
+		}
+		
+		// Toda Collection possui um metodo iterator() que retorna um objeto Iterator, utilizado antigamente para iterar seus componentes.
+		System.out.println();
+		System.out.println("**Percorrendo um Set no Java 2**");
+		Iterator<String> iteradorAlunos = alunos.iterator(); 
+		while (iteradorAlunos.hasNext()) {
+			System.out.println(iteradorAlunos.next());
+		} // Quando o Iterator chega no ultimo elemento da Collection de onde foi gerado, ele se torna inutilizavel. Para percorrer novamente, eh necessario criar um novo Iterator.
 		
 	}
 }
