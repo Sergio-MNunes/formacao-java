@@ -2,8 +2,11 @@ package br.com.meuprojeto.classes;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Set;
 
 public class Curso {
@@ -12,6 +15,7 @@ public class Curso {
 	private String instrutor;
 	private List<Aula> aulas = new ArrayList<Aula>(); // Tratando a referencia como um List, podemos usufruir do polimorfismo quando lidamos com o objeto fora da classe.
 	private Set<Aluno> alunosMatriculados = new HashSet<>(); // Sets nao possuem ordem de elementos, porem sao mais performaticos do que lista para algumas operacoes.
+	private Map<Integer, Aluno> deMatriculaParaAluno = new HashMap<>(); // Maps permitem mapear chave e valor, igual dicionario no python. 
 	
 	public Curso (String nome, String instrutor) {
 		this.nome = nome;
@@ -33,7 +37,7 @@ public class Curso {
 														 // meuCurso.getAulas().add(new Aula(1, "nome qualquer de aula", 23));
 	}
 	
-	public void adiciona(Aula aula) {
+	public void adicionaAula(Aula aula) {
 		this.aulas.add(aula);
 	}
 	
@@ -43,6 +47,16 @@ public class Curso {
 	
 	public void matricula(Aluno aluno) {
 		this.alunosMatriculados.add(aluno);
+		this.deMatriculaParaAluno.put(aluno.getMatricula(), aluno);
+		// Todo aluno matriculado, alem de ser adicionado ao conjunto de alunos, tambem eh adicionado ao Map com a matricula como chave e o Aluno como valor.
+		// Desta forma, podemos buscar um aluno a partir de sua matricula por exemplo, coisa que antes nao podiamos apenas com o Set.
+	}
+	
+	public Aluno procuraMatricula(int matricula) {
+		if (!this.deMatriculaParaAluno.containsKey(matricula)) { // Se a matricula recebida por parametro nao existe no Map, joga um NoSuchElementException
+			throw new NoSuchElementException("Matrícula não encontrada");
+		}		
+		return deMatriculaParaAluno.get(matricula); // Caso exista, retorna o valor atribuido a chave matricula buscada.
 	}
 
 	public int getTempoTotal() {

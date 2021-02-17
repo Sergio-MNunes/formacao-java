@@ -16,10 +16,10 @@ public class TesteCurso {
 		
 		// A linha abaixo da erro, pois o metodo getAulas retorna um objeto imutavel, pois o definimos como Collections.unmodifiableList
 		// cursoDeColecoes.getAulas().add(new Aula(1, "nome qualquer de aula", 23));  
-		cursoDeColecoes.adiciona(new Aula(1, "Aprendendo sobre ArrayLists", 19));
-		cursoDeColecoes.adiciona(new Aula(2, "Aprendendo sobre LinkedLists", 15));
-		cursoDeColecoes.adiciona(new Aula(3, "Aprendendo sobre HashSets", 17));
-		cursoDeColecoes.adiciona(new Aula(4, "Ainda sobre ArrayLists", 8));
+		cursoDeColecoes.adicionaAula(new Aula(1, "Aprendendo sobre ArrayLists", 19));
+		cursoDeColecoes.adicionaAula(new Aula(2, "Aprendendo sobre LinkedLists", 15));
+		cursoDeColecoes.adicionaAula(new Aula(3, "Aprendendo sobre HashSets", 17));
+		cursoDeColecoes.adicionaAula(new Aula(4, "Ainda sobre ArrayLists", 8));
 		
 		System.out.println(cursoDeColecoes.getAulas());
 		
