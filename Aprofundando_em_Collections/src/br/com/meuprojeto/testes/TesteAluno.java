@@ -3,7 +3,7 @@ package br.com.meuprojeto.testes;
 import br.com.meuprojeto.classes.Aluno;
 import br.com.meuprojeto.classes.Curso;
 
-public class TestaAluno {
+public class TesteAluno {
 
 	public static void main(String[] args) {
 		
