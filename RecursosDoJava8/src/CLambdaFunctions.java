@@ -5,12 +5,12 @@ import java.util.List;
 // costumam ser bastante verborragicas, ainda que nos poupem de precisar criar uma classe e instanciar um objeto para apenas usar uma interface que so possui um metodo.
 
 // Estas interfaces que possuem apenas um metodo abstrato costumam ser chamadas de Interfaces Funcionais e o Java 8, alem dos default methods para as interfaces, introduziu uma
-// forma mais amigavel de lidar com elas: as Lambda Functions. 
+// forma mais amigavel de lidar com elas: as Lambda Expressions. 
 
-// As lambda Functions nos ajudam a escrever as interfaces funcionais de maneira mais sucinta, pois o compilador esta preparado para interpreta-las como tais,
+// As Lambda Expressions nos ajudam a escrever as interfaces funcionais de maneira mais sucinta, pois o compilador esta preparado para interpreta-las como tais,
 // ou seja, para escrevermos um lambda precisamos necessariamente estar lidando com uma interface funcional, esse eh basicamente o motivo da existencia delas.
 
-// ****PRECISAMOS estar lidando com uma Interface Funcional para podermos utilizar uma lambda function. Resumo abaixo:
+// ****PRECISAMOS estar lidando com uma Interface Funcional para podermos utilizar uma lambda expression. Resumo abaixo:
 //		- Uma interface que so possui um metodo abstrato eh chamada de Interface Funcional;
 //		- Uma interface funcional pode ser trabalhada de tres maneiras: criando uma classe tradicional que a implementa, classes anonimas e lambdas;
 // 		- A classe anonima tem a vantagem de nao se precisar criar uma classe e instanciar um objeto, pois isso tudo eh feito no momento de utilizar a interface funcional;
