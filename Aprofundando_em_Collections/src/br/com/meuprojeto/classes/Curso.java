@@ -67,6 +67,15 @@ public class Curso {
 		return tempoTotal;
 	}
 	
+	// O metodoo forEach() do map recebe um argumento BiConsumer, enquanto as demais colecoes costumam receber Consumer.
+	// A diferenca eh que o BiConsumer trabalha com dois argumentos. Veja a assinatura do forEach() de map:
+	// default void forEach(BiConsumer<? super K, ? super V> action)
+	// Traduzindo, o forEach recebe uma interface funcional BiConsumer, que eh generic. O primeiro tipo tem que ser maior que K e o segundo maior que V (maior no sentido
+	// de que precisam ser superclasses de K e V respectivamente, ou seja, pode ser K e V, ou K e V precisam herdar delas.
+	public void imprimeMap() {
+		deMatriculaParaAluno.forEach((matricula, aluno) -> System.out.println(matricula + " " + aluno));
+	}
+	
 	@Override
 	public String toString() {
 		return "[Curso: " + this.nome + ", por " + this.instrutor + ". Duração: " + this.getTempoTotal() + " minutos]";
