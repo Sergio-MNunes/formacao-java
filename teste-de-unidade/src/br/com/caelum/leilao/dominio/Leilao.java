@@ -14,8 +14,27 @@ public class Leilao {
 		this.lances = new ArrayList<Lance>();
 	}
 	
-	public void propoe(Lance lance) {
-		lances.add(lance);
+	public void propoe(Lance novoLance) {
+		int lancesDoUsuario = contaLances(novoLance.getUsuario());
+
+		if (!lances.isEmpty() && (validaLanceConsecutivo(novoLance.getUsuario()) || lancesDoUsuario >= 5)) return;
+		
+		lances.add(novoLance);
+	}
+
+	private int contaLances(Usuario usuario) {
+		int qtdeDeLances = (int) lances.stream()
+			.filter(lance -> lance.getUsuario() == usuario)
+			.count();
+		return qtdeDeLances;
+	}
+
+	private boolean validaLanceConsecutivo(Usuario usuario) {
+		return getUltimoLance().getUsuario().equals(usuario);
+	}
+
+	public Lance getUltimoLance() {
+		return lances.get(lances.size() - 1);
 	}
 
 	public String getDescricao() {
