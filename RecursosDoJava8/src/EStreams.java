@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 // Conforme escrito na propria documentacao da interface Stream, ela pode ser vista como uma maneira de realizar queries em colecoes do Java.
