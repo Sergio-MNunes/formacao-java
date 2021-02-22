@@ -60,4 +60,54 @@ public class LeilaoTest {
 		
 		Assert.assertEquals(10, leilao.getLances().size(), 0);
 	}
+	
+	@Test
+	public void UsuarioDobraOSeuUltimoLance() {
+		
+		Usuario u1 = new Usuario(1, "Sergio");
+		Usuario u2 = new Usuario(2, "Bruno");
+		
+		Leilao leilao = new Leilao("Playstation 5");
+		
+		Lance lance1 = new Lance(u1, 3000);
+		Lance lance2 = new Lance(u2, 4000);
+		
+		leilao.propoe(lance1);
+		leilao.propoe(lance2);
+		leilao.dobraUltimoLance(u1);
+		
+		Assert.assertEquals(6000, leilao.getUltimoLance().getValor(), 0.00001);
+	}
+	
+	@Test
+	public void DobraUltimoLanceComDoisLancesSeguidosDoUsuario() {
+		
+		Usuario u1 = new Usuario(1, "Sergio");
+		Usuario u2 = new Usuario(2, "Bruno");
+		
+		Leilao leilao = new Leilao("Playstation 5");
+		
+		Lance lance1 = new Lance(u1, 3000);
+		Lance lance2 = new Lance(u2, 5000);
+		Lance lance3 = new Lance(u1, 6000);
+		
+		leilao.propoe(lance1);
+		leilao.propoe(lance2);
+		leilao.propoe(lance3);
+		leilao.dobraUltimoLance(u1);
+		
+		Assert.assertEquals(6000, leilao.getUltimoLance().getValor(), 0.00001);
+	}
+	
+	@Test
+	public void DobraUltimoLanceSemNenhumLance() {
+		
+		Usuario u1 = new Usuario(1, "Sergio");
+		
+		Leilao leilao = new Leilao("Playstation 5");
+		
+		leilao.dobraUltimoLance(u1);
+		
+		Assert.assertEquals(0, leilao.getLances().size());
+	}
 }
