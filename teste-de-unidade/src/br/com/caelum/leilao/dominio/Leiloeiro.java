@@ -12,8 +12,7 @@ public class Leiloeiro {
 	public void avaliaLeilao(Leilao leilao) {
 		
 		if (leilao.getLances().size() == 0) {
-			this.maiorLance = 0;
-			this.menorLance = 0;
+			throw new RuntimeException("Leilão não possui lances para avaliar");
 		} else {
 		
 		menorLance = leilao.getLances().stream()
